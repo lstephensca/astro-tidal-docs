@@ -1,6 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import { getCollection } from "astro:content";
+
+// Layout
+import Layout from "@layouts/Layout.astro";
+
+const rawCategories = await getCollection("categories");
+const rawDocs = await getCollection("docs");
 ---
 
 <Layout title="Welcome to tidal.">
